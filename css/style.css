@@ -4,3 +4,8 @@ body {
     font-family: 'Azeret Mono', monospace;
     transition: all 0.2s ;
 }
+
+.pfp {
+    height: 8em;
+    width: auto;
+}
