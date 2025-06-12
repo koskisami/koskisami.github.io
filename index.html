@@ -5,74 +5,89 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sami Koski</title>
 </head>
+
 <body id="body" data-bs-theme="dark">
-    <nav class="navbar navbar-expand pb-4">
-        <div class="container">
-            <a class="navbar-brand" href="#">Sami Koski</a>
-            <ul class="navbar-nav flex-row blur">
-            </ul>
-            <ul class="navbar-nav flex-row flex-wrap ms-md-auto blur">
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://github.com/koskisami"><i class="bi bi-github"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://linkedin.com/in/koskisami"><i class="bi bi-linkedin"></i></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <div class="container">
-        <div class="row flex-row d-flex">
-            <div class="col-lg-8 flex-column">
+        <div class="row flex-row d-flex pt-4">
+            <div class="col-lg-16 flex-column">
                 <div class="col pb-4">
                     <div class="card blur">
-                        <h5 class="card-header"><i class="bi bi-info-circle-fill"></i> About me</h5>
-                        <div class="card-body">
-                            <img src="photos/pfp.jpg" class="pfp rounded-circle" alt="...">
-                            <p class="card-text">Hello! I am Sami. I'm a 24 year old recently graduated IT student from Oulu, with an interest in Web
+                        <div class="card-body p-4 pb-8">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="flex-shrink-0">
+                                    <img src="photos/pfp.jpg" alt="My face"
+                                        class="img-fluid rounded-circle border border-dark border-3"
+                                        style="width: 80px; height: 80px;">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <h4 class="card-text mb-0 me-2">Sami Koski</h4>
+                                    </div>
+                                    <div>
+                                        <a target="_blank" href="https://linkedin.com/in/koskisami"
+                                            class="btn btn-outline-secondary btn-rounded btn-sm blur"><i
+                                                class="bi bi-linkedin"></i>
+                                            LinkedIn</a>
+                                        <a target="_blank" href="https://github.com/koskisami"
+                                            class="btn btn-outline-secondary btn-rounded btn-sm blur"><i
+                                                class="bi bi-github"></i>
+                                            GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="card-text">Hello! I am Sami. I'm a 24 year old recently graduated IT student
+                                from
+                                Oulu, with an interest in Web
                                 Development and a special interest in UI/Graphics design.</p>
-                            <p class="card-text">Most of my experience comes from studies, school projects and some personal projects.</p>
+                            <p class="card-text">Most of my experience comes from studies, school projects and some
+                                personal projects.</p>
                             <p class="card-text">I enjoy working in teams, but I also work great alone.</p>
+                            <hr>
                         </div>
                     </div>
                 </div>
-                <div class="col pb-4">
-                    <div class="card blur">
-                        <h5 class="card-header"><i class="bi bi-code"></i> Current Project(s)</h5>
-                        <div class="card-body">
-                            <h2>nano</h2>
-                            <p>A fun Discord bot that has a few commands to search for gifs from Tenor and generate text, some based on markov chains and messages that users have sent.</p>
-                            <a href="http://github.com/koskisami/nano" target="_blank" class="btn btn-outline-secondary"><i class="bi bi-box-arrow-up-right"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 flex-column">
-                <div class="col pb-4">
-                    <div class="card blur">
-                        <h5 class="card-header"><i class="bi bi-link"></i> Links</h5>
-                        <div class="card-body">
-                            <div class="list-group list-group-flush blur">
-                                <a target="_blank" href="https://linkedin.com/in/koskisami" class="list-group-item list-group-item-action blur"><i class="bi bi-linkedin"></i>  LinkedIn</a>
-                                <a target="_blank" href="https://github.com/koskisami" class="list-group-item list-group-item-action blur"><i class="bi bi-github"></i>  GitHub</a>
+                <div class="row flex-row d-flex">
+                    <div class="col-lg-16 flex-column">
+                        <div class="col pb-4">
+                            <div class="card blur">
+                                <div class="card-body p-4 pb-8">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <h4 class="card-text">Interested? Check out my Resume!</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <p class="card-text">I am currently looking for a job, despite my little work
+                                        experience, I have gained valuable experience from my studies, hobbies and own
+                                        projects.</p>
+                                    <p class="card-text">If you are interested in learning more about me, check out my
+                                        resume from the buttons below, or contact me directly by email.
+                                        <br>I read my emails everyday, and
+                                        will respond as soon as possible.
+                                    </p>
+                                    <hr>
+                                    <div>
+                                        <a target="_blank" href="./cv/CV-EN-SAMI.pdf"
+                                            class="btn btn-outline-secondary btn-rounded btn-sm blur">
+                                            <i class="fi fi-gb"></i> My Resume</a>
+                                        <a target="_blank" href="./cv/CV-FI-SAMI.pdf"
+                                            class="btn btn-outline-secondary btn-rounded btn-sm blur">
+                                            <i class="fi fi-fi"></i> Minun Ansioluetteloni</a>
+                                        <a target="_blank" href="mailto:koskisamiantero@outlook.com"
+                                            class="btn btn-outline-secondary btn-rounded btn-sm blur">
+                                            <i class="bi-at"></i> Send me an Email</i></a>
+                                    </div>
+                                </div>
                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col pb-4">
-                    <div class="card blur">
-                        <h5 class="card-header"><i class="bi bi-file-earmark-person-fill"></i> Resume</h5>
-                        <div class="card-body">
-                            <div class="list-group list-group-flush blur">
-                                <a target="_blank" href="./CV-FI-SAMI.pdf" class="list-group-item list-group-item-action blur"><i class="bi bi-file-earmark-person-fill"></i>  In Finnish</a>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
