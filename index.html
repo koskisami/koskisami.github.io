@@ -10,19 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sami Koski</title>
 </head>
-<body id="body" class="">
+<body id="body" data-bs-theme="dark">
     <nav class="navbar navbar-expand pb-4">
         <div class="container">
             <a class="navbar-brand" href="#">Sami Koski</a>
-            <ul class="navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cv.html">Resume</a>
-                </li>
+            <ul class="navbar-nav flex-row blur">
             </ul>
-            <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto blur">
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="https://github.com/koskisami"><i class="bi bi-github"></i></a>
                 </li>
@@ -36,7 +30,7 @@
         <div class="row flex-row d-flex">
             <div class="col-lg-8 flex-column">
                 <div class="col pb-4">
-                    <div class="card">
+                    <div class="card blur">
                         <h5 class="card-header"><i class="bi bi-info-circle-fill"></i> About me</h5>
                         <div class="card-body">
                             <img src="photos/pfp.jpg" class="pfp rounded-circle" alt="...">
@@ -48,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col pb-4">
-                    <div class="card">
+                    <div class="card blur">
                         <h5 class="card-header"><i class="bi bi-code"></i> Current Project(s)</h5>
                         <div class="card-body">
                             <h2>nano</h2>
@@ -60,13 +54,23 @@
             </div>
             <div class="col-lg-4 flex-column">
                 <div class="col pb-4">
-                    <div class="card">
+                    <div class="card blur">
                         <h5 class="card-header"><i class="bi bi-link"></i> Links</h5>
                         <div class="card-body">
-                            <div class="list-group list-group-flush">
-                                <a href="cv.html" class="list-group-item list-group-item-action"><i class="bi bi-file-earmark-person-fill"></i>  Resume</a>
-                                <a target="_blank" href="https://linkedin.com/in/koskisami" class="list-group-item list-group-item-action"><i class="bi bi-linkedin"></i>  LinkedIn</a>
-                                <a target="_blank" href="https://github.com/koskisami" class="list-group-item list-group-item-action"><i class="bi bi-github"></i>  GitHub</a>
+                            <div class="list-group list-group-flush blur">
+                                <a target="_blank" href="https://linkedin.com/in/koskisami" class="list-group-item list-group-item-action blur"><i class="bi bi-linkedin"></i>  LinkedIn</a>
+                                <a target="_blank" href="https://github.com/koskisami" class="list-group-item list-group-item-action blur"><i class="bi bi-github"></i>  GitHub</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col pb-4">
+                    <div class="card blur">
+                        <h5 class="card-header"><i class="bi bi-file-earmark-person-fill"></i> Resume</h5>
+                        <div class="card-body">
+                            <div class="list-group list-group-flush blur">
+                                <a target="_blank" href="./CV-FI-SAMI.pdf" class="list-group-item list-group-item-action blur"><i class="bi bi-file-earmark-person-fill"></i>  In Finnish</a>
                             </div>
                             
                         </div>
@@ -75,8 +79,8 @@
             </div>
         </div>
     </div>
-
 </body>
+
 <script src="js/js.js"></script>
 <script src="js/bootstrap.min.js"></script>
 

@@ -1,4 +1,4 @@
-const body = document.getElementById("body");
+/* const body = document.getElementById("body");
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches;
 
 function themeSwitch () {
@@ -19,4 +19,5 @@ function themeSwitch () {
 
 }
 
-window.onload = themeSwitch();
+window.onload = themeSwitch(); 
+*/
