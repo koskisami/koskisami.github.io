@@ -36,6 +36,6 @@ body {
     color: #16141d;
 }
 
-.row-eq-height {
-    flex-wrap: wrap;
+.row.pb-4 > .col-lg > .blur {
+    height: 100%;
 }
