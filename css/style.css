@@ -3,11 +3,7 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     transition: all 0.1s ;
-    background-image: radial-gradient(circle at center center, #ff87ef, #7c64c4), repeating-radial-gradient(circle at center center, #ff87ef, #ff87ef, 51px, transparent 102px, transparent 51px);
-    background-blend-mode: multiply;
-    background-color: #7c64c4;
     background-color: rgba(17, 25, 40, 0.64);
-    background-attachment: fixed;
 }
 
 .blur {
@@ -38,4 +34,62 @@ body {
 
 .row.pb-4 > .col-lg > .blur {
     height: 100%;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background: #16141d;
+  overflow: visible;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate1 linear infinite 100s;
+
+  box-shadow:
+    0 0 25vmin hsl(320, 80%, 65%),
+    30vmin -20vmin 14vmin hsl(300, 85%, 55%),
+    -40vmin 30vmin 13vmin hsl(280, 90%, 60%),
+    60vmin 50vmin 11vmin hsl(340, 70%, 60%),
+    -60vmin -50vmin 15vmin hsl(310, 80%, 50%),
+    90vmin -60vmin 12vmin hsl(290, 75%, 55%);
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  width: 90vmin;
+  height: 90vmin;
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+  animation: rotate2 linear infinite 140s;
+  animation-direction: reverse;
+
+  box-shadow:
+    0 10vmin 22vmin hsl(330, 85%, 60%),
+    -10vmin -5vmin 18vmin hsl(305, 75%, 65%),
+    70vmin -40vmin 14vmin hsl(305, 75%, 65%),
+    -60vmin 60vmin 13vmin hsl(295, 80%, 55%),
+    50vmin -30vmin 12vmin hsl(325, 90%, 60%),
+    -80vmin -70vmin 13vmin hsl(300, 80%, 55%);
+}
+
+@keyframes rotate1 {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotate2 {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
