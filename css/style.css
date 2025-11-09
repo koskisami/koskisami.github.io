@@ -2,13 +2,12 @@
 
 body {
     font-family: 'Space Grotesk', sans-serif;
-    transition: all 0.1s ;
+    transition: all 0.1s;
     background-color: rgba(17, 25, 40, 0.64);
 }
 
 .blur {
     backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
     background-color: rgba(17, 25, 40, 0.64);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
@@ -16,7 +15,6 @@ body {
 
 .blur-light {
     backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
     background-color: rgba(198, 209, 231, 0.64);
     border-radius: 12px;
     border: 1px solid rgba(32, 32, 32, 0.125);
@@ -25,7 +23,6 @@ body {
 
 .blur-notice {
     backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
     background-color: rgba(230, 121, 244, 0.803);
     border-radius: 12px;
     border: 1px solid rgba(32, 32, 32, 0.125);
@@ -53,7 +50,6 @@ body {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: rotate1 linear infinite 100s;
-
   box-shadow:
     0 0 25vmin hsl(320, 80%, 65%),
     30vmin -20vmin 14vmin hsl(300, 85%, 55%),
@@ -74,7 +70,6 @@ body {
   transform: translate(50%, 50%);
   animation: rotate2 linear infinite 140s;
   animation-direction: reverse;
-
   box-shadow:
     0 10vmin 22vmin hsl(330, 85%, 60%),
     -10vmin -5vmin 18vmin hsl(305, 75%, 65%),
@@ -92,4 +87,145 @@ body {
 @keyframes rotate2 {
   0% { transform: translate(-50%, -50%) rotate(0deg); }
   100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.carousel-visual {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+.carousel-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.carousel-visual::before,
+.carousel-visual::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+    z-index: 2;
+}
+.carousel-visual::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.33), rgba(0,0,0,0));
+}
+.carousel-visual::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.33), rgba(0,0,0,0));
+}
+
+.thumb-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-wrapper { position: relative; overflow: hidden; }
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    z-index: 10;
+    pointer-events: auto;
+    background: transparent;
+    border-radius: 12px;
+}
+
+.gallery-overlay::before,
+.gallery-overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 120px;
+    pointer-events: none;
+    z-index: 9;
+}
+.gallery-overlay::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(17,25,40,0.85), rgba(17,25,40,0));
+}
+.gallery-overlay::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(17,25,40,0.85), rgba(17,25,40,0));
+}
+
+.gallery-overlay h4 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    margin: 0;
+    z-index: 11;
+    color: #fff;
+}
+
+#galleryGrid {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 11;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    pointer-events: auto;
+}
+
+.thumb-overlay {
+    width: 96px;
+    height: 64px;
+    object-fit: cover;
+    display: inline-block;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    transition: transform .12s ease, background .12s ease;
+}
+.tech-item:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.04);
+}
+.tech-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: inline-block;
+    filter: grayscale(1) brightness(0) invert(1);
+    transition: filter .12s ease, transform .12s ease;
+}
+
+.tech-icon svg {
+    fill: #fff;
+    color: #fff;
+}
+
+.tech-item:hover .tech-icon {
+    filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 4px 12px rgba(0,0,0,0.45));
+    transform: translateY(-3px);
+}
+
+@media (max-width: 420px) {
+    .tech-icon { width: 22px; height: 22px; }
+    .tech-item { gap: 0.4rem; padding: 0.3rem 0.4rem; }
+}
+
+@media (max-width: 576px) {
+    .thumb-overlay { width: 72px; height: 48px; }
+    .carousel-visual { height: 300px; }
 }

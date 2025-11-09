@@ -21,3 +21,14 @@ function themeSwitch () {
 
 window.onload = themeSwitch(); 
 */
+
+(function () {
+  var originalTitle = document.title;
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      document.title = '👀 Sami Koski';
+    } else {
+      document.title = originalTitle;
+    }
+  });
+})();
